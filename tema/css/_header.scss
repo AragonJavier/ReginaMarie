@@ -1,0 +1,35 @@
+$color-primary:#fff;
+#header {
+  background-color: #253D5B;
+&__menu{
+  visibility: hidden;
+}
+}
+.menu{
+  &__items:hover{
+    background-color: rgba($color-primary, 0.3);
+    transition: all 500ms ease;
+  }
+  &__link:link{
+    text-decoration: none;
+  }
+}
+@media(max-width:768px) {
+  #header_nav{
+    width: 100%;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__items{
+      visibility:visible;
+    }
+  }
+  #main_nav{
+    width: 100%;
+    #main_menu {
+      visibility: visible;
+    }
+  }
+}
