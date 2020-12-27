@@ -24,6 +24,10 @@ body {
   color: var(--text-white);
   object-fit: cover;
 }
+.icon{
+  width:1.2em;
+  margin: 10px auto;
+}
 
 .img_logo {
   width: 20%;
