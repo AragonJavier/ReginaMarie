@@ -10,10 +10,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <header class="sticky z-10 flex flex-row justify-between w-full  bg-white border-b-2 top-0">
+  <header class="sticky z-10 flex flex-row justify-between w-full bg-white border-b-2  top-0">
     <button class="hamburger hamburger--vortex btn_menu" id="btn_menu" type="button" name="menu">
     <span class="hamburger-box">
         <span class="hamburger-inner">
@@ -22,19 +23,17 @@
     </button>
     <div class="content_logo">
       <img class="img_logo w-1/4 "src="/img/logo.png" alt="logo" />
-      <p class="text-xl-center py-4 title">Fund. Caminando Por La Paz- <br>Jovenes En La Calle</br></p>
+      <p class="text-sm-center py-4 title">Fund. Caminando Por La Paz - <br>Jovenes En La Calle</br></p>
     </div>
-    <aside class="header_aside" id="header_aside">
       <nav class="header__menu">
-        <ul class="menu list-none  cursor-pointer">
+        <ul class="menu list-none cursor-pointer">
           <li class="menu__items"><a class="menu__link" href="/index.html">Inicio</a></li>
-          <li class="menu__items"><a class="menu__link" href="/regina.html">Regina</a></li>
+          <li class="menu__items"><a class="menu__link" href="/regina.html">Nuestro Instituto</a></li>
           <li class="menu__items"><a class="menu__link" href="/oregon.html">Oregón</a></li>
-          <li class="menu__items"><a class="menu__link" href="#">Como Donar</a></li>
           <li class="menu__items"><a class="menu__link" href="#">Acerca de</a></li>
         </ul>
       </nav>
-    </aside>
+
   </header>
 <div class="service__news container pt-8">
   <article class="service container-lg card-header">
@@ -58,7 +57,26 @@
       Sandoval de la Universidad Catolica, entre otros invitados importantes.</p>
     </p>
   </article>
-</div><footer class="flex flex-col text-center text-white bg-blue-800">
+</div>
+<div class="img_container">
+    <div class="bg_img  id="bg_img">
+        <h1 class="text_title">¿Como Donar?</h1>
+        <p class="text-justify py-4 text-xl container-lg">
+          <span class="cpl uppercase">Caminando Por La Paz</span> necesita su apoyo hoy, y desea que usted también sea parte de este programa. Por favor considere convertirse en patrocinador de nuestros estudiantes.
+        </p>
+        <nav class="py-2 nav_items">
+          <li>$50 US Dólares mensuales permitirá que un estudiante pueda obtener su Kit de utiles.</li>
+          <li>$120-$150 Dólares mensuales permitirán que un estudiante asista a la universidad.</li>
+        </nav>
+        <h1 class="text_title">🤗¡Muchas Gracias!🤗</h1>
+        <div class="card_items my-4">
+          <div class="card_img">
+            <img src="/img/banco_logo.svg" alt="" class="my-10 mx-auto card_logo">
+          </div>
+        </div>
+  </div>
+  </div>
+<footer class="flex flex-col text-center text-white bg-blue-800">
   <h1 class="text-xl text- py-2">Caminando por la paz - <br>Jovenes en la Calle &copy2020</h1>
   <a name="facebook"
   class="text-3xl cursor-pointer" target="_blank"
