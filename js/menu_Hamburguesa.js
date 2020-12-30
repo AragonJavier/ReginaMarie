@@ -11,5 +11,5 @@ function hamburgerMenu(panelbtn, panel_aside) {
 d.addEventListener('DOMContentLoaded', e => {
   hamburgerMenu(".btn_menu", ".header__menu");
 
-})
+});
 console.log(hamburgerMenu)
