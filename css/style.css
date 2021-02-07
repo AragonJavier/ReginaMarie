@@ -37,8 +37,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 20px;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -59,8 +57,8 @@ body {
   width: 100%;
   height: var(--header_height);
   position: fixed;
-  padding: 1rem 0;
   left: 0;
+	padding:5px 0;
   bottom: 0;
   z-index: 999;
   background: var(--bg-color);
@@ -80,106 +78,6 @@ body {
   align-items: center;
 }
 
-/*
-.switch_container {
-	margin-right: 4rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-*/
-
-.switch_container {
-  display: none;
-  /*
-	display: flex;
-	justify-content: space-around;
-	width: 50%;
-	border: thin solid red;
-*/
-}
-
-.switch {
-  display: block;
-  width: 50px;
-  height: 20px;
-  background-color: #ddd;
-  border-radius: 25px;
-}
-
-.switch::before {
-  content: "";
-  /* display: block; */
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #666;
-  border-radius: 50%;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.checkbox {
-  display: none;
-}
-
-.checkbox:checked + .switch::before {
-  -webkit-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-.sun_icon {
-  width: 20px;
-  height: 20px;
-  background-color: var(--sun-bg);
-  display: block;
-  margin-right: 1rem;
-  border-radius: 50%;
-  position: relative;
-}
-
-.sun_icon::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  display: block;
-  top: -5.1px;
-  left: -5px;
-  border: 3px var(--sun-bg) dashed;
-  border-radius: 50%;
-  background-color: transparent;
-}
-
-.moon_icon {
-  width: 30px;
-  height: 30px;
-  background-color: var(--moon-bg);
-  display: block;
-  margin-left: 0.5rem;
-  border-radius: 50%;
-  position: relative;
-  -webkit-transform: rotate(-15deg);
-  transform: rotate(-15deg);
-}
-
-.moon_icon::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  display: block;
-  top: -5px;
-  left: -5px;
-  border-radius: 50%;
-  background-color: var(--bg-color);
-}
-
 .banner {
   display: none;
 }
@@ -194,13 +92,16 @@ body {
   width: inherit;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .img_logo {
+/*
   width: 100px;
   object-fit: cover;
   object-position: center;
+*/
+display: none;
 }
 
 .title {
@@ -226,7 +127,6 @@ body {
 }
 
 /*Boton de menu*/
-
 .menu {
   width: 100%;
   position: fixed;
@@ -237,8 +137,8 @@ body {
   background-color: var(--bg-color);
   opacity: 0;
   pointer-events: none;
-  /*	 transform: translate(0, 200%);*/
   transition: opacity 0.7s ease;
+
 }
 
 .menu.is-active {
@@ -272,15 +172,15 @@ body {
   margin-bottom: 1rem;
 }
 
-#btn_menu svg {
+#btn_menu  svg {
   fill: var(--bg-blue);
+	margin-top: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
   #btn_menu {
     display: none;
   }
-
   .menu {
     position: static;
     opacity: 1;
@@ -327,23 +227,30 @@ body {
   background-image: url(/img/IMG_5071.JPG);
   background-size: cover;
   background-position: center;
-  max-height: 100vh;
+	text-align: center;
+		position: relative;
 }
-.hero_image--opacity {
-  width: 100%;
-  max-height: 100vh;
-  color: var(--text-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: var(--text-dark);
+.hero_image:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: var(--text-dark);
+	left: 0;
 }
 
-.text_title {
+.hero_image--opacity{
+  text-align:center;
+	color: var(--text-white);
+	position: relative;
+	padding-top: 1rem;
+	padding-bottom: 15vh;
+}
+
+ .hero_image--opacity .text_title {
   font-family: "Raleway";
-  font-weight: 900;
-  font-size: 2.3em;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .cpl {
@@ -378,6 +285,7 @@ body {
 
 .btn_modal {
   width: 100%;
+	height: 100%;
   display: inline-block;
   padding: 1.5rem 0;
   border-radius: 1rem;
@@ -393,7 +301,7 @@ body {
 
 .modal_container {
   width: auto;
-  height: auto;
+  height: 100vh;
   position: fixed;
   opacity: 0;
   top: 0;
@@ -409,11 +317,9 @@ body {
 
 .modal {
   width: auto;
-  height: inherit;
+/*  height: inherit;*/
   background: var(--bg-color);
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -422,6 +328,7 @@ body {
   transition: transform 0.5s ease;
   transform: scale(0%);
   border-radius: 30px;
+	font-size: 0.5rem;
 }
 
 .modal_close {

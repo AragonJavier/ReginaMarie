@@ -16,11 +16,11 @@
 ((d) => {
 
 	const $btn_menu = d.querySelector(".btn_menu"),
-		    $menu = d.querySelector(".menu");
+		$menu = d.querySelector(".menu");
 
-	  $btn_menu.addEventListener("click", (e) => {
-			$btn_menu.firstElementChild.classList.toggle("none")
-			$btn_menu.lastElementChild.classList.toggle("none")
-			$menu.classList.toggle("is-active")
+	$btn_menu.addEventListener("click", (e) => {
+		$btn_menu.firstElementChild.classList.toggle("none")
+		$btn_menu.lastElementChild.classList.toggle("none")
+		$menu.classList.toggle("is-active")
 	})
 })(document);
