@@ -224,19 +224,20 @@ display: none;
 /*Paralax*/
 
 .hero_image {
-  background-image: url(/img/IMG_5071.JPG);
+  background-image: url(../img/IMG_5071.JPG);
   background-size: cover;
   background-position: center;
 	text-align: center;
-		position: relative;
+	position: relative;
 }
 .hero_image:before{
 	content: '';
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: var(--text-dark);
+	background-color:var(--text-dark);
 	left: 0;
+	top: 0;
 }
 
 .hero_image--opacity{
